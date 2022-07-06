@@ -1,0 +1,228 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-image: linear-gradient(to right, #7b4397, #dc2430);
+    overflow: hidden;
+    transition: 0.5s;
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-family: 'Kantumruy Pro', sans-serif;
+    font-weight: bolder;
+}
+.userForm{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 40px 8px;
+    border-radius: 5px;
+    z-index: 1;
+}
+.addUser{
+    background-image: linear-gradient(to right, #fc00ff, #00dbde);
+    height: 26.4rem;
+    transition: .3s;
+}
+.editUser{
+    background-image: linear-gradient(to right, #fc00ff, #00dbde);
+    height: 26.409rem;
+    transition: .3s;
+}
+.manageUsers{
+    background-color: #fff5f5;
+    margin: 0px 4px;
+    border-radius: 5px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+th{
+    padding: 8px 26px;
+    border: 1px solid #cecece;
+    text-align: left;
+}
+td{
+    padding: 7px 9px;
+    border: 1px solid #cecece;
+}
+.typeEmail{
+    width: 10rem;
+}
+.typeRole{
+    width: 5rem;
+}
+.userTable{
+    margin-top: 10px;
+    border: 1px solid #cecece;
+    border-collapse: collapse;
+}
+.fields{
+    width: 19rem;
+    height: 2rem;
+    margin: 10px 10px;
+    padding-left: 27px;
+    border: none;
+    transition: .5s;
+}
+.selectRole{
+    width: 20.68rem;
+}
+.heading{
+    margin: 10px 10px;
+    padding: 20px 2px;
+    text-align: center;
+}
+.mHeading{
+    text-align: center;
+    margin-top: 10px;
+}
+.fields:hover{
+    background-color: #e4e4e4;
+    border-radius: 10px;
+}
+.btn{
+    background-color: #3aaf16;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding-left: 7px;
+    width: 20.98rem;
+    transition: .5s;
+}
+.btn:hover{
+    cursor: pointer;
+    border-radius: 45px;
+    background-color: #33811b;
+    box-shadow: 5px 5px 30px black;
+}
+.divs{
+    margin-top: 2rem;
+    box-shadow: 5px 23px 54px black;
+}
+
+
+/* Text css*/
+.textContainer{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 100%);
+    width: 100%;
+    text-align: center;
+    color: white;
+    z-index: -2;
+}
+
+.textContainer span{
+    font-size: 10vw;
+    font-weight: 800;
+    text-shadow: -0.08em 0.03em 0.12em rgba(0, 0, 0, 0.9);
+}
+
+div span:not(:first-child){
+    margin-left: -0.23em;
+}
+
+/*Notification Box*/
+.notificationBox{
+    display: inline;
+    position: absolute;
+    width: 20rem;
+    height: 6rem;
+    border-radius: 10px;
+    top: 50%;
+    left: 50%;
+    background-color: white;
+    transform: translate(29.5rem, 17rem);
+    box-shadow: -6px 12px 30px black;
+}
+.notificationArea{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-10rem, -3.5rem);
+    text-align: center;
+    margin: 2.56rem 0rem;
+    width: 20rem;
+}
+.notificationBox:hover .icon{
+    animation: none;
+}
+
+/* ICON*/
+.icon{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 25px;
+    height: 25px;
+    background-color: red;
+    border-radius: 15px;
+    padding: 0px 5px;
+    color: white;
+    text-align: center;
+    z-index: 1;
+    transform: translate(7rem, -3.7rem);
+    box-shadow: -5px 2px 9px black;
+    animation: vibrate .8s linear 0s infinite ;
+}
+@keyframes vibrate
+{
+0%   {margin-left: 0px;}
+25%  {margin-left: -6px;}
+50%  {margin-left: 0px;}
+75%  {margin-left: 6px;}
+100% {margin-left: 0px;}
+
+}
+.activeDiv{
+    margin: 0rem 9rem;
+}
+
+@media (max-width: 800px) {
+    
+    body{
+        overflow-y: auto;
+    }
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .addUser{
+        background-image: linear-gradient(to right, #fc00ff, #00dbde);
+        height: 26.4rem;
+        margin-left: 0rem;
+        transform: translateX(-50%);
+        transition: .5s;
+    }
+    .editUser{
+        background-image: linear-gradient(to right, #fc00ff, #00dbde);
+        height: 26.409rem;
+        margin-left: 0rem;
+        transform: translateX(-50%);
+        transition: .5s;
+    }
+    .manageUsers{
+        background-color: #fff5f5;
+        margin: 4rem 4px;
+        border-radius: 5px;
+        overflow-y: auto;
+    }
+    .addUser:hover{
+        margin-left: 1.34rem;
+        transform: translate( -30%,0%);
+        margin-top: 32px;
+        border-radius: 10px;
+    }
+    .editUser:hover{
+        margin-left: 1.34rem;
+        transform: translate( -30%,0%);
+        margin-top: 32px;
+        border-radius: 10px;
+    }
+}
